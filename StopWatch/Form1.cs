@@ -30,6 +30,24 @@ namespace StopWatch
             printText.Text += "*";
             tb.Text += "*";
 
+            if(timer1.Enabled == false)
+            {
+                timer1.Enabled = true;
+            }
+            else
+            {
+                timer1.Enabled = false;
+            }
+
+        }
+
+        private int elapasedTime = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            elapasedTime++;
+            printText.Text = elapasedTime + "초 경과";
+            tb.Text = elapasedTime + "초 경과";
+            progressBar1.Value = elapasedTime;
         }
     }
 }

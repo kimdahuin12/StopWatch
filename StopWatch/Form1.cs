@@ -21,5 +21,15 @@ namespace StopWatch
         {
 
         }
+
+        private void start_Click(object sender, EventArgs e)
+        {
+
+            Button button = (Button)start;
+            button.Text = "또 눌러??";
+            printText.Text += "*";
+            tb.Text += "*";
+
+        }
     }
 }

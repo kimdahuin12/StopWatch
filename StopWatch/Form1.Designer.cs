@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.start = new System.Windows.Forms.Button();
+            this.printText = new System.Windows.Forms.Label();
+            this.tb = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -42,11 +45,40 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Dahuin\'s StopWatch";
             // 
+            // start
+            // 
+            this.start.Location = new System.Drawing.Point(103, 174);
+            this.start.Name = "start";
+            this.start.Size = new System.Drawing.Size(75, 23);
+            this.start.TabIndex = 1;
+            this.start.Text = "버튼";
+            this.start.UseVisualStyleBackColor = true;
+            this.start.Click += new System.EventHandler(this.start_Click);
+            // 
+            // printText
+            // 
+            this.printText.AutoSize = true;
+            this.printText.Location = new System.Drawing.Point(37, 216);
+            this.printText.Name = "printText";
+            this.printText.Size = new System.Drawing.Size(11, 12);
+            this.printText.TabIndex = 3;
+            this.printText.Text = "*";
+            // 
+            // tb
+            // 
+            this.tb.Location = new System.Drawing.Point(158, 213);
+            this.tb.Name = "tb";
+            this.tb.Size = new System.Drawing.Size(100, 21);
+            this.tb.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 281);
+            this.Controls.Add(this.tb);
+            this.Controls.Add(this.printText);
+            this.Controls.Add(this.start);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -63,6 +95,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button start;
+        private System.Windows.Forms.Label printText;
+        private System.Windows.Forms.TextBox tb;
     }
 }
 
